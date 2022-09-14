@@ -83,7 +83,7 @@ $(window).on('load', function() {
    * Loads the basemap and adds it to the map
    */
   function addBaseMap() {
-    var basemap = trySetting('_tileProvider', 'Stamen.TonerLite');
+    var basemap = trySetting('_tileProvider', 'Stamen.TonerLite'); //   OpenStreetMap
     L.tileLayer.provider(basemap, {
       maxZoom: 18
     }).addTo(map);
@@ -92,7 +92,7 @@ $(window).on('load', function() {
   function initMap(options, chapters) {
     createDocumentSettings(options);
 
-    var chapterContainerMargin = 70;
+    var chapterContainerMargin = 100;  // how fast the map moves when I scroll the text
 
     document.title = getSetting('_mapTitle');
     $('#header').append('<h1>' + (getSetting('_mapTitle') || '') + '</h1>');
@@ -101,10 +101,10 @@ $(window).on('load', function() {
     // Add logo
     if (getSetting('_mapLogo')) {
       $('#logo').append('<img src="' + getSetting('_mapLogo') + '" />');
-      $('#top').css('height', '60px');
+      $('#top').css('height', '500px'); //600px
     } else {
       $('#logo').css('display', 'none');
-      $('#header').css('padding-top', '25px');
+      $('#header').css('padding-top', '250px');  //250px
     }
 
     // Load tiles

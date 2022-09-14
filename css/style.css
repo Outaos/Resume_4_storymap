@@ -174,3 +174,23 @@ h2 {
   font-size: 1.1em;
   font-weight: normal;
 }
+a:link {
+  color: #2E86C1 ;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #2E86C1 ;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #7D3C98;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
